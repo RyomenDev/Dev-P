@@ -3,3 +3,19 @@
 <img src="./utils/differences.png">
 <!--  -->
 <img src="./utils/whenToUse.png">
+<!--  -->
+<img src="./utils/objects.png">
+<!--  -->
+<img src="./utils/spread_rest.png">
+<!--  -->
+<img src="./utils/this.png">
+<!--  -->
+<img src="./utils/newKeyword.png">
+<!--  -->
+<img src="./utils/call_apply.png">
+<!--  -->
+<img src="./utils//call_bind_apply.png">
+<!--  -->
+<img src="./utils/static.png">
+<!--  -->
+<!-- <img src="./utils/call_apply.png"> -->

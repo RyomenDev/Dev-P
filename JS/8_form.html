@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: blue;">Form</h1>
+    <div id="root"></div>
+</body>
+<script>
+    // Create a new form element
+    const form = document.createElement("form");
+
+    // Add some attributes and styles to the form
+    form.setAttribute("id", "user-form");
+    form.style.textAlign = "center";
+
+    // Add a text input field to the form
+    const input = document.createElement("input");
+    // input.setAttribute("type", "text");
+    // input.setAttribute("placeholder", "Enter your name");
+    // input.setAttribute("name", "username");
+    Object.assign(input, {
+        type: "text",
+        placeholder: "Enter your name",
+        name: "username",
+    });
+    input.style.margin = "10px";
+
+    // Add a submit button to the form
+    const button = document.createElement("button");
+    button.setAttribute("type", "submit");
+    button.textContent = "Submit";
+    button.style.margin = "10px";
+
+    // Append the input and button to the form
+    form.appendChild(input);
+    form.appendChild(button);
+
+    // Create a container to show submitted input
+    const inputHolder = document.createElement("div");
+    inputHolder.setAttribute("id", "input-holder");
+    inputHolder.style.textAlign = "center";
+    inputHolder.style.marginTop = "20px";
+
+    // Handle form submission
+    form.onsubmit = (event) => {
+        event.preventDefault(); // Prevent form default submission behavior
+        const formData = new FormData(form);
+        const userName = formData.get("username"); // Retrieve input value
+
+        // Clear previous content
+        inputHolder.innerHTML = "";
+
+        // Add the submitted value to the display container
+        const result = document.createElement("p");
+        result.textContent = `Hello, ${userName}!`;
+        result.style.color = "green";
+        result.style.fontSize = "18px";
+        inputHolder.appendChild(result);
+    };
+
+    // Append the form and input holder to the root div
+    const root = document.getElementById("root");
+    root.appendChild(form);
+    root.appendChild(inputHolder);
+</script>
+
+</html>
