@@ -1,4 +1,4 @@
-// he static keyword is used to define static methods or static properties within a class. Static methods and properties are associated with the class itself rather than with instances of the class. This means you can access them directly on the class, without creating an instance of the class.       
+// the static keyword is used to define static methods or static properties within a class. Static methods and properties are associated with the class itself rather than with instances of the class. This means you can access them directly on the class, without creating an instance of the class.       
 
 // Key Characteristics of the static Keyword
 

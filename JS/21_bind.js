@@ -8,18 +8,18 @@
 // ! Use Case 1: Ensuring Proper this Context
 
 const person = {
-  name: 'Bob',
-  greet: function() {
+  name: "Bob",
+  greet: function () {
     console.log(`Hello, I am ${this.name}`);
-  }
+  },
 };
 
 const greetBob = person.greet;
-greetBob();  // Output: Hello, I am undefined (because 'this' is not bound to 'person')
+greetBob(); // Output: Hello, I am undefined (because 'this' is not bound to 'person')
 
 // Using bind to ensure 'this' is bound to 'person'
 const greetPerson = person.greet.bind(person);
-greetPerson();  // Output: Hello, I am Bob
+greetPerson(); // Output: Hello, I am Bob
 
 // ! Use Case 2: Partial Function Application
 function multiply(a, b) {
@@ -29,21 +29,21 @@ function multiply(a, b) {
 // Creating a partially applied function that multiplies by 2
 const multiplyByTwo = multiply.bind(null, 2);
 
-console.log(multiplyByTwo(5));  // Output: 10
-console.log(multiplyByTwo(3));  // Output: 6
+console.log(multiplyByTwo(5)); // Output: 10
+console.log(multiplyByTwo(3)); // Output: 6
 
 // ! Use Case 3: Handling Event Listeners
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 const person = {
-  name: 'Charlie',
-  greet: function() {
+  name: "Charlie",
+  greet: function () {
     console.log(`Hello, I am ${this.name}`);
-  }
+  },
 };
 
 // Without bind, 'this' would refer to the button element
-button.addEventListener('click', person.greet);  // 'this' inside greet would be the button
+button.addEventListener("click", person.greet); // 'this' inside greet would be the button
 
 // Using bind to ensure 'this' refers to 'person'
-button.addEventListener('click', person.greet.bind(person));  // 'this' inside greet will be 'person'
+button.addEventListener("click", person.greet.bind(person)); // 'this' inside greet will be 'person'
