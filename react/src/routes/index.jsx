@@ -8,6 +8,8 @@ import Layout from "../Layout";
 import Home from "../components/Home";
 import Login from "../components/Login";
 
+// import App from "../components/useHooks";
+
 import Forms from "../components/Forms";
 import Form_1 from "../components/Forms/Form_1";
 
@@ -19,6 +21,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
+      {/* <Route path="/useHooks" element={<App />} /> */}
       <Route path="login" element={<Login />} />
       <Route path="logout" element={<Login />} />
       <Route path="forms" element={<Forms />}>
