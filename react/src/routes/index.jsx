@@ -9,6 +9,7 @@ import Home from "../components/Home";
 import Login from "../components/Login";
 
 // import App from "../components/useHooks";
+import { TodoApp } from "../components/todoApp/TodoApp";
 
 import Forms from "../components/Forms";
 import Form_1 from "../components/Forms/Form_1";
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       {/* <Route path="/useHooks" element={<App />} /> */}
+      <Route path="/todoApp" element={<TodoApp />} />
       <Route path="login" element={<Login />} />
       <Route path="logout" element={<Login />} />
       <Route path="forms" element={<Forms />}>
