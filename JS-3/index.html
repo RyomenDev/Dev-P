@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <div id="div1">Practice-1</div>
+    <button onClick="addContent()">Add New</button>
+    <script>
+        const addContent = () => {
+            const div1 = document.getElementById("div1");
+            let newpara = document.createElement("p");
+            // newpara.textContent = "new content " + new Date().toLocaleTimeString();
+            // div1.appendChild(newpara);
+            div1.innerHTML += `<p>new content + ${new Date().toLocaleTimeString()}</p>`;
+        }
+    </script>
+</body>
+
+</html>
