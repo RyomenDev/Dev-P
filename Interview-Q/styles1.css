@@ -1,0 +1,47 @@
+
+
+.check-box1 {
+    appearance: none;
+    border: solid 2px #000;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.check-box1:checked+label {
+    text-decoration: line-through;
+    color: green;
+}
+
+.check-box1:checked {
+    border: solid 2px #09ed18;
+    background-color: #09ed18;
+}
+
+/* Add a yellow square inside when checked */
+/* .check-box1:checked::before {
+    content: "";
+    width: 12px; 
+    height: 12px;
+    background-color: yellow;
+    position: absolute;
+} */
+
+/* When checked, show an "X" inside */
+.check-box1:checked::before {
+    content: "X";
+    color: white;
+    /* Color of the "X" */
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
